@@ -140,7 +140,7 @@ const Dashboard = () => {
         </div>
 
         {/* Middle Panel: Files in Selected Directory */}
-        <div style={{ width: '30%', borderRight: '1px solid #ccc', padding: '10px', overflowY: 'auto' }}>
+        <div style={{ flexBasis: '250px', flexShrink: 0, borderRight: '1px solid #ccc', padding: '10px', overflowY: 'auto' }}>
           <h3>Files {selectedDirectory && `in ${selectedDirectory}`}</h3>
           {selectedDirectory && (
             <div style={{ marginBottom: '10px' }}>
