@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'validator-v'
           slot-name: 'Production'
-          package: .
+          package: backend
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_CD438A120B6646F5973C4D0D9767BD96 }}
