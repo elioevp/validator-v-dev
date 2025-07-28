@@ -29,7 +29,8 @@ const Login = ({ onLoginSuccess }) => {
   };
 
   return (
-    <div>
+    <div style={{ textAlign: 'center', padding: '20px' }}>
+      <h1>validator-v</h1>
       <h2>{isRegister ? 'Register' : 'Login'}</h2>
       <form onSubmit={handleSubmit}>
         <input type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />

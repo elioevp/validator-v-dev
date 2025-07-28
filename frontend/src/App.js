@@ -20,12 +20,14 @@ const App = () => {
   }, []);
 
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={isAuthenticated ? <Navigate to="/dashboard" /> : <Login onLoginSuccess={handleLoginSuccess} />} />
-        <Route path="/dashboard" element={isAuthenticated ? <Dashboard onLogout={handleLogout} /> : <Navigate to="/" replace />} />
-      </Routes>
-    </Router>
+    <div style={{ backgroundColor: '#ADD8E6', minHeight: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+      <Router>
+        <Routes>
+          <Route path="/" element={isAuthenticated ? <Navigate to="/dashboard" /> : <Login onLoginSuccess={handleLoginSuccess} />} />
+          <Route path="/dashboard" element={isAuthenticated ? <Dashboard onLogout={handleLogout} /> : <Navigate to="/" replace />} />
+        </Routes>
+      </Router>
+    </div>
   );
 };
 
