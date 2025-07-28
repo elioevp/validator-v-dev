@@ -110,7 +110,7 @@ const Dashboard = () => {
       <div style={{ padding: '10px', borderBottom: '1px solid #ccc', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <h2>Dashboard</h2>
         {username && <p style={{ color: 'red' }}>Welcome, {username}!</p>}
-        <button onClick={handleLogout}>Logout</button>
+        <button onClick={handleLogout} style={{ padding: '10px 20px', fontSize: '1.3em' }}>Logout</button>
       </div>
       <div style={{ display: 'flex', flex: 1 }}>
         {/* Left Panel: Directories */}

@@ -33,11 +33,11 @@ const Login = ({ onLoginSuccess }) => {
       <h1>validator-v</h1>
       <h2>{isRegister ? 'Register' : 'Login'}</h2>
       <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
-        <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
-        <button type="submit">{isRegister ? 'Register' : 'Login'}</button>
+        <input type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} style={{ padding: '10px', fontSize: '1.3em', margin: '5px 0' }} />
+        <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} style={{ padding: '10px', fontSize: '1.3em', margin: '5px 0' }} />
+        <button type="submit" style={{ padding: '10px 20px', fontSize: '1.3em', margin: '5px 0' }}>{isRegister ? 'Register' : 'Login'}</button>
       </form>
-      <button onClick={() => setIsRegister(!isRegister)}>
+      <button onClick={() => setIsRegister(!isRegister)} style={{ padding: '10px 20px', fontSize: '1.3em', margin: '5px 0' }}>
         {isRegister ? 'Switch to Login' : 'Switch to Register'}
       </button>
     </div>
