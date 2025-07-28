@@ -20,7 +20,7 @@ const App = () => {
   }, []);
 
   return (
-    <div style={{ backgroundColor: '#ADD8E6', minHeight: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+    <div style={{ backgroundColor: '#ADD8E6', minHeight: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'flex-start', paddingTop: '50px' }}>
       <Router>
         <Routes>
           <Route path="/" element={isAuthenticated ? <Navigate to="/dashboard" /> : <Login onLoginSuccess={handleLoginSuccess} />} />
