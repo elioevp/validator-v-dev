@@ -1,6 +1,6 @@
 import api from './api';
 
-const API_URL = '/api/directories';
+const API_URL = '/directories';
 
 const getAuthHeaders = () => {
   const token = localStorage.getItem('token');
