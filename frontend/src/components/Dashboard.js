@@ -109,7 +109,7 @@ const Dashboard = () => {
       <h1 style={{ textAlign: 'center', padding: '10px' }}>validator-v</h1>
       <div style={{ padding: '10px', borderBottom: '1px solid #ccc', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <h2>Dashboard</h2>
-        {username && <p style={{ color: 'red' }}>Welcome, {username}!</p>}
+        {username && <p style={{ color: 'red', fontSize: '1.2em', fontWeight: 'bold' }}>Welcome, {username}!</p>}
         <button onClick={handleLogout} style={{ padding: '10px 20px', fontSize: '1.3em' }}>Logout</button>
       </div>
       <div style={{ display: 'flex', flex: 1 }}>
