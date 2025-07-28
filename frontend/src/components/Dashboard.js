@@ -181,7 +181,7 @@ const Dashboard = () => {
         </div>
 
         {/* Right Panel: Photo Viewer */}
-        <div style={{ flexGrow: 1, padding: '10px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <div style={{ padding: '10px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
           {selectedFile ? (
             <img src={selectedFile.url} alt={selectedFile.name} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
           ) : (
