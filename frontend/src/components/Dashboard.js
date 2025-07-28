@@ -105,7 +105,7 @@ const Dashboard = () => {
   };
 
   return (
-    <div style={{ display: 'flex', height: '100vh', flexDirection: 'column' }}>
+    <div style={{ display: 'flex', minHeight: '100vh', flexDirection: 'column' }}>
       <h1 style={{ textAlign: 'center', padding: '10px' }}>validator-v</h1>
       <div style={{ padding: '10px', borderBottom: '1px solid #ccc', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <h2>Dashboard</h2>
