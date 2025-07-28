@@ -10,4 +10,9 @@ const login = (data) => {
   return api.post(`${API_URL}/login`, data);
 };
 
-export default { register, login };
+const authService = {
+  register,
+  login
+};
+
+export default authService;
