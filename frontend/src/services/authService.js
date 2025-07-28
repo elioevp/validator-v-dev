@@ -1,6 +1,6 @@
 import api from './api';
 
-const API_URL = '/auth';
+const API_URL = '/api/auth';
 
 const register = (data) => {
   return api.post(`${API_URL}/register`, data);
