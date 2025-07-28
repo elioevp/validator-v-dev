@@ -21,10 +21,6 @@ jobs:
         with:
           submodules: true
           lfs: false
-      - name: Set up Node.js version
-        uses: actions/setup-node@v3
-        with:
-          node-version: '22.x'
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
@@ -32,7 +28,7 @@ jobs:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_HAPPY_DUNE_0D4C0061E }}
           repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for Github integrations (i.e. PR comments)
           action: "upload"
-          build_command: "REACT_APP_BACKEND_URL=${{ secrets.REACT_APP_BACKEND_URL_SECRET }} npm run build"
+          build_command: "nvm install 22 && nvm use 22 && REACT_APP_BACKEND_URL=${{ secrets.REACT_APP_BACKEND_URL_SECRET }} npm run build"
           ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
           # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
           app_location: "./frontend" # App source code path
