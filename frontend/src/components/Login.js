@@ -19,6 +19,7 @@ const Login = () => {
       } else {
         const { data } = await authService.login({ username, password });
         localStorage.setItem('token', data.token);
+        onLoginSuccess(); // Notify App.js of successful login
         navigate('/dashboard'); // Use navigate for redirection
       }
     } catch (error) {
