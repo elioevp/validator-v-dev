@@ -1,11 +1,13 @@
 
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import authService from '../services/authService';
 
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [isRegister, setIsRegister] = useState(false);
+  const navigate = useNavigate(); // Initialize useNavigate
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -17,7 +19,7 @@ const Login = () => {
       } else {
         const { data } = await authService.login({ username, password });
         localStorage.setItem('token', data.token);
-        window.location = '/dashboard';
+        navigate('/dashboard'); // Use navigate for redirection
       }
     } catch (error) {
       console.error('Registration/Login Error:', error);
