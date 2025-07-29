@@ -183,7 +183,7 @@ const Dashboard = () => {
         {/* Right Panel: Photo Viewer */}
         <div style={{ padding: '10px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
           {selectedFile ? (
-            <img src={selectedFile.url} alt={selectedFile.name} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
+            <img src={selectedFile.url} alt={selectedFile.name} style={{ maxWidth: '80%', maxHeight: '80%', objectFit: 'contain' }} />
           ) : (
             <p>Click on a file to view its content.</p>
           )}
