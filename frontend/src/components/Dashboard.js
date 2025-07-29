@@ -140,7 +140,7 @@ const Dashboard = () => {
         </div>
 
         {/* Middle Panel: Files in Selected Directory */}
-        <div style={{ flexBasis: '250px', flexShrink: 0, borderRight: '1px solid #ccc', padding: '10px', overflowY: 'auto' }}>
+        <div style={{ flex: '0 0 350px', borderRight: '1px solid #ccc', padding: '10px', overflowY: 'auto' }}>
           <h3>Files {selectedDirectory && `in ${selectedDirectory}`}</h3>
           {selectedDirectory && (
             <div style={{ marginBottom: '10px' }}>
@@ -181,9 +181,9 @@ const Dashboard = () => {
         </div>
 
         {/* Right Panel: Photo Viewer */}
-        <div style={{ padding: '10px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <div style={{ flex: 1, padding: '10px', display: 'flex', justifyContent: 'center', alignItems: 'center', overflow: 'hidden' }}>
           {selectedFile ? (
-            <img src={selectedFile.url} alt={selectedFile.name} style={{ maxWidth: '80%', maxHeight: '80%', objectFit: 'contain' }} />
+            <img src={selectedFile.url} alt={selectedFile.name} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
           ) : (
             <p>Click on a file to view its content.</p>
           )}
